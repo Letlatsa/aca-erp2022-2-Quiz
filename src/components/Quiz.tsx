@@ -5,7 +5,7 @@ import { Question21to30 } from '../data/Question21to30'
 import { Question31to40 } from '../data/Question31to40'
 import { Question41to50 } from '../data/Question41to50'
 
-export default function () {
+export default function Quiz () {
   return (
     <div>
       <h1>Quiz App</h1>
