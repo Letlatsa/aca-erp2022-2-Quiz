@@ -6,6 +6,23 @@ import { Question31to40 } from '../data/Question31to40'
 import { Question41to50 } from '../data/Question41to50'
 
 export default function Quiz () {
+ 
+ const [currentQuestion,setCurrentQuestion] = useState<number>(0)
+ const [score,setScore] =useState<number>(0)
+ const [showScore,setShowScore]=useState<boolean>(false)
+ 
+ const handleAnswerOptionClick = (isCorrect:boolean) => {
+  if (isCorrect) {
+    setScore(score + 1);
+  }
+
+  const nextQuestion = currentQuestion + 1;
+  if (nextQuestion < Question1to10.length) {
+    setCurrentQuestion(nextQuestion);
+  } else {
+    setShowScore(true);
+  }
+};
   return (
     <div>
       <h1>Quiz App</h1>
